@@ -1,0 +1,310 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #ff3c3c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 16px rgba(44,44,44,0.22);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    background-color: #fff;
+    color: #ff3c3c;
+    
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 60, 60, 0.3);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    color: white;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    border-radius: 50px;
+    box-shadow: 0 14px 32px rgba(44,44,44,0.20);
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: auto;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  .cta-button {
+    background-color: #fff;
+    color: #ff3c3c;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .cta-button:hover {
+    background-color: #ffe2e2;
+   
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 60, 60, 0.3);
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h2 {
+  
+  	top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff3c3c;
+    
+    
+    padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    border-radius: 50px;
+    
+  }
+  
+  /* Grid Layout */
+  .restaurant-grid,
+  .dishes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* 3D Card Style */
+  .card-3d {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(44,44,44,0.23), 0 2px 8px rgba(44,44,44,0.17);
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+  }
+  .card-3d:hover {
+    box-shadow: 0 32px 48px rgba(44,44,44,0.35), 0 4px 12px rgba(44,44,44,0.16);
+    transform: translateY(-8px) scale(1.03);
+  }
+  
+  /* Restaurant Cards */
+  .restaurant-card,
+  .dish-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    text-align: center;
+  }
+  .restaurant-card:hover,
+  .dish-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 10px 32px rgba(44,44,44,0.18);
+  }
+  .restaurant-card img,
+  .dish-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: filter 0.3s;
+    filter: brightness(0.98) contrast(1.06);
+  }
+  .restaurant-card h3,
+  .dish-card h3 {
+    font-size: 1.08rem;
+    margin: 10px 0 5px;
+    color: #222;
+  }
+  .restaurant-card p,
+  .dish-card p {
+    font-size: 0.96rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* 3D Button Effects */
+  .button-3d {
+    background: linear-gradient(145deg, #ff3c3c 40%, #ff8787 100%);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 0 #d32f2f, 0 6px 18px #b13f2a77;
+    font-size: 1.10rem;
+    font-weight: bold;
+    transition: transform 0.13s, box-shadow 0.13s;
+  }
+  .button-3d:active {
+    transform: translateY(7px);
+    box-shadow: 0 2px 0 #d32f2f, 0 1px 8px #b13f2a55;
+  }
+  
+  /* Order Button */
+  .order-button {
+    background-color: #ff3c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.order-button:hover {
+    background-color: #e63333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 60, 60, 0.3);
+}
+  
+  /* 3D Text */
+  .text-3d {
+    color: #fff;
+    text-shadow:
+      0 3px 8px #d60707,
+      0 1px 0 #c0c0c0,
+      0 1.5px 0 #b20000;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+  }
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-section h3 {
+    margin-bottom: 10px;
+    color: #ff6666;
+  }
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.94rem;
+    transition: color 0.2s;
+  }
+  .footer-section ul li a:hover {
+    color: #fff;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.88rem;
+    color: #aaa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background-color: #ff3c3c;
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 200px;
+      display: none;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .restaurant-card,
+    .dish-card {
+      width: 90%;
+    }
+  }
+  

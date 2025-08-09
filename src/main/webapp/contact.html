@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TWT-Foods</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/43548a9a-89bb-492e-add7-0ee0e93722f5.png" alt="TWT Logo">
+                <span>TWT-Foods</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home">Home</a></li>
+                
+               
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div style="flex:1 1 320px;">
+            <h1 style="color: #e67e22;">Contact Us</h1>
+            <p>We'd love to hear from you! Fill out the form or use the details below to get in touch.</p>
+            <form id="contactForm" style="margin-top:1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                <input type="text" placeholder="Your Name" required style="padding:0.7rem; border-radius:6px; border:1px solid #ddd;">
+                <input type="email" placeholder="Your Email" required style="padding:0.7rem; border-radius:6px; border:1px solid #ddd;">
+                <textarea placeholder="Your Message" rows="5" required style="padding:0.7rem; border-radius:6px; border:1px solid #ddd;"></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+        <div class="company-info" style="flex:1 1 260px;">
+            <h2 style="color:#e67e22;">Company Info</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, Foodie City, FC 12345</p>
+            <p><i class="fas fa-envelope"></i> support@twtfoods.com</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <div style="margin-top:1.5rem;">
+                <h3 style="color:#e67e22;">Follow Us</h3>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TWT-Foods</h3>
+                <p>Your trusted partner in food delivery</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                 <li><a href="index.html">Log out</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@twtfoods.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TWT-Foods. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Message sent');
+  });
+</script>
+</body>
+</html> 
